@@ -15,7 +15,7 @@ const Emails = ({ openDrawer }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/mail/${type}`, {
+      .get(`${REACT_APP_SERVER_INDEX_URL}/mail/${type}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

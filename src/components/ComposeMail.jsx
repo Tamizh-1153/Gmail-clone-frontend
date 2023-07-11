@@ -88,7 +88,7 @@ const ComposeMail = ({ openDialog, setOpenDialog }) => {
     e.preventDefault()
 
     axios
-      .post(`http://localhost:5000/mail/send`, data, {
+      .post(`${REACT_APP_SERVER_INDEX_URL}/mail/send`, data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
