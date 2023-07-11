@@ -69,16 +69,15 @@ const ComposeMail = ({ openDialog, setOpenDialog }) => {
     }else{
 
     axios
-      .post(`http://localhost:5000/mail/drafts`, data, {
+      .post(`https://gmail-clone-t23y.onrender.com/mail/drafts`, data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data)
         setOpenDialog(false)
-         setData({})
-        
+        setData({})
       })
       .catch((error) => console.log(error))
     }  
@@ -88,7 +87,7 @@ const ComposeMail = ({ openDialog, setOpenDialog }) => {
     e.preventDefault()
 
     axios
-      .post(`${REACT_APP_SERVER_INDEX_URL}/mail/send`, data, {
+      .post(`https://gmail-clone-t23y.onrender.com/mail/send`, data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

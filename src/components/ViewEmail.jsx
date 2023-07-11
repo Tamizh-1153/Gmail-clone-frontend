@@ -55,15 +55,11 @@ const ViewEmail = ({ openDrawer }) => {
   const { email } = state
 
   const deleteEmail = () => {
-    axios.post(
-      `${process.env.REACT_APP_SERVER_INDEX_URL}/mail/bin`,
-      [email._id],
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
-    )
+    axios.post(`https://gmail-clone-t23y.onrender.com/mail/bin`, [email._id], {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
     window.history.back()
   }
 

@@ -7,14 +7,13 @@ const ForgotPassword = () => {
     console.log(e.target.email.value)
 
     axios
-      .post(
-        `${process.env.REACT_APP_SERVER_INDEX_URL}/api/v1/forgot_password`,
-        {
-          email: e.target.email.value,
-        }
-      )
-      .then((response) => {console.log(response.data)
-      alert('Password reset link sent,Check your email')})
+      .post(`https://gmail-clone-t23y.onrender.com/api/v1/forgot_password`, {
+        email: e.target.email.value,
+      })
+      .then((response) => {
+        console.log(response.data)
+        alert("Password reset link sent,Check your email")
+      })
       .catch((error) => console.log(error))
   }
 

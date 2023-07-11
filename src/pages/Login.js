@@ -11,16 +11,19 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch(`${process.env.REACT_APP_SERVER_INDEX_URL}/api/v1/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    })
+    const response = await fetch(
+      `https://gmail-clone-t23y.onrender.com/api/v1/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    )
 
     const data = await response.json()
     console.log(data)

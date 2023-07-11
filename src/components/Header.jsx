@@ -87,7 +87,7 @@ const Header = ({ toggleDrawer }) => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_SERVER_INDEX_URL}/mail/user/info`, {
+      .get(`https://gmail-clone-t23y.onrender.com/mail/user/info`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

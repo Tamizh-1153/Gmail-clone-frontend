@@ -15,7 +15,7 @@ const Emails = ({ openDrawer }) => {
 
   useEffect(() => {
     axios
-      .get(`${REACT_APP_SERVER_INDEX_URL}/mail/${type}`, {
+      .get(`https://gmail-clone-t23y.onrender.com/mail/${type}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

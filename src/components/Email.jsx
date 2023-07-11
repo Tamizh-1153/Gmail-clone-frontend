@@ -40,7 +40,7 @@ const Email = ({ email, selectedEmails, setRefreshScreen,setSelectedEmails,openD
   
   const toggleStarredMails = () => {
     axios.post(
-      `${process.env.REACT_APP_SERVER_INDEX_URL}/mail/starred`,
+      `https://gmail-clone-t23y.onrender.com/mail/starred`,
       { id: email._id, value: !email.starred },
       {
         headers: {
