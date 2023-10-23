@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <div className="container ">
       <div className="row justify-content-center mt-5">
-        <div className="col-md-4">
+        <div className="col-lg-4">
           <div className="card my-5">
             <div className="card-body">
               <div className="d-flex justify-content-center mt-5 mb-2">
